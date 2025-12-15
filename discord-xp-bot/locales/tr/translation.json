@@ -1,0 +1,165 @@
+{
+  "common": {
+    "noPermission": "Bu komutu kullanmak için yetkiniz yok.",
+    "commandError": "Bu komutu çalıştırırken bir hata oluştu.",
+    "timeout": "Zaman aşımı. İşlem iptal edildi.",
+    "yes": "Evet",
+    "no": "Hayır",
+    "cooldown": "Lütfen {{seconds}} saniye bekleyin.",
+    "setupRequired": "Botun tam olarak verimli çalışabilmesi için bazı özellikler kısıtlanmıştır. Bu sunucuda botun tam verimli çalışabilmesi için /kurulum komutunu kullanın.",
+    "channel": "Kanal",
+    "role": "Rol",
+    "none": "Yok",
+    "notSet": "Ayarlanmamış",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "activate": "SİSTEMİ BAŞLAT",
+    "reset": "Sıfırla",
+    "cancel": "İptal Et",
+    "secondsShort": "sn"
+  },
+  "events": {
+    "guildCreate": {
+      "setupDM": "Merhaba! Beni **{{guildName}}** sunucusuna eklediğiniz için teşekkürler.\n\nBaşlamak için lütfen sunucunuza gidin ve seviye sistemini yapılandırmak için `/setup` yazın.",
+      "setupPublic": "Merhaba {{ownerTag}}! Seviye botunu kullanmaya başlamak için lütfen `/setup` yazın."
+    },
+    "levelUp": {
+      "message": "Tebrikler {user}, yeni seviyen {level}, iyi eğlenceler 🍁🥳"
+    }
+  },
+  "setup": {
+    "panelTitle": "XP Sistem Ayarları",
+    "panelDesc": "Sistemi aktifleştirmek için aşağıdaki menüden Log Kanalını seçin. XP kazanma sıklığını (Bekleme Süresi) da ayarlayabilirsiniz.",
+    "selectLogPlaceholder": "Log Kanalı Seç (Zorunlu)",
+    "systemReady": "Kurulum tamamlanmaya hazır.",
+    "waitingAction": "Log kanalı seçimi bekleniyor...",
+    "systemActiveTitle": "XP Sistemi Aktif Edildi! 🎉",
+    "complete": "Kurulum Başarılı!",
+    "finalNote": "Kullanıcılar artık XP kazanabilir. Seviye atlama bildirimleri {{channel}} kanalına gönderilecek.",
+    "existingSetupTitle": "Mevcut Kurulum Tespit Edildi",
+    "existingSetupDesc": "Bu sunucuda zaten aktif bir kurulum bulunuyor.\n\n⚠️ **Devam ederseniz, mevcut yapılandırma veritabanından tamamen silinecek ve sıfırdan kurulum başlayacaktır.**\n\nBu işlem geri alınamaz!",
+    "currentLog": "Mevcut Log Kanalı",
+    "currentCooldown": "Mevcut Bekleme Süresi",
+    "warningFooter": "Veritabanı temizliği için sıfırdan kurulum önerilir.",
+    "btnResetAndStart": "Ayarları Sil ve Başla",
+    "cancelled": "İşlem iptal edildi. Mevcut ayarlar korundu.",
+    "testMessageHeader": "Seviye Atladın (Test)",
+    "testMessageFooter": "Bu bir kurulum test mesajıdır.",
+    "testSent": "Test mesajı kanala gönderildi:",
+    "testFailed": "Test mesajı gönderilemedi! (Botun o kanalda yazma yetkisi var mı?)"
+  },
+  "top": {
+    "title": "🏆 Liderlik Tablosu",
+    "footer": "Senin Sıralaman: #{{rank}} • {{name}}",
+    "noData": "Henüz bu zaman aralığında veri yok.",
+    "empty": "Henüz bu zaman aralığında veri yok.",
+    "daily": "Günlük",
+    "weekly": "Haftalık",
+    "monthly": "Aylık",
+    "alltime": "Tüm Zamanlar",
+    "format": "▫️ Seviye **{{level}}** ({{xp}} XP)",
+    "yourStatsTitle": "Şu anki istatistiklerin",
+    "textInfo": "💭|Metin",
+    "voiceInfo": "🎙️|Ses",
+    "levelShort": "Seviye",
+    "heavyQueryCooldown": "Bu komut (Aylık/Haftalık/Günlük) şu anda sunucu genelinde bekleme süresindedir. Lütfen {{seconds}} saniye sonra tekrar deneyin."
+  },
+  "rank": {
+    "noData": "Henüz hiç XP'niz yok. XP kazanmak için sohbete başlayın!",
+    "userNotFound": "Bu kullanıcı sunucuda bulunamadı.",
+    "cardError": "Seviye kartı oluşturulurken bir hata oluştu.",
+    "isBot": "🤖 Botların seviye kartı olmaz."
+  },
+  "settings": {
+    "title": "⚙️ {{guildName}} - Sunucu Ayarları",
+    "logChannel": "Log Kanalı",
+    "cooldown": "Bekleme Süresi",
+    "seconds": "{{sec}} Saniye",
+    "spamProtection": "Spam Koruması",
+    "spamDesc": "{{window}} saniye içinde {{count}} mesaj",
+    "ignoredChannels": "Yasaklı Kanallar",
+    "ignoredRoles": "Yasaklı Roller",
+    "footer": "Ayarları değiştirmek için /setup veya /xp-ignore komutlarını kullanın."
+  },
+  "xp_ignore": {
+    "missingSelection": "❌ Lütfen bir **Kanal** veya bir **Rol** seçin.",
+    "added": "✅ **{{target}}** ({{type}}) başarıyla yasaklı listesine eklendi. Artık XP kazanılmayacak.",
+    "removed": "✅ **{{target}}** ({{type}}) üzerindeki yasak kaldırıldı. Artık XP kazanılabilir."
+  },
+  "commands": {
+    "setup": {
+      "description": "XP botu için ilk kurulumu başlatır (Log kanalı vb.)."
+    },
+    "top": {
+      "description": "Sunucunun en çok XP kazanan kullanıcılarını listeler."
+    },
+    "rank": {
+      "description": "Sizin veya başka bir kullanıcının seviye kartını gösterir."
+    },
+    "settings": {
+      "description": "Sunucunun mevcut XP ve Seviye ayarlarını gösterir."
+    },
+    "xp-ignore": {
+      "description": "Belirli kanal veya roller için XP kazanımını kapatır/açar."
+    },
+    "setlog": {
+      "description": "Seviye atlama bildirimleri için kanalı ayarlar.",
+      "success": "Seviye atlama log kanalı {{channel}} olarak ayarlandı."
+    },
+    "setcooldown": {
+      "description": "Metin XP'si kazandıktan sonraki bekleme süresini (saniye) ayarlar.",
+      "success": "Metin XP bekleme süresi {{seconds}} saniye olarak ayarlandı."
+    },
+    "setlevelrole": {
+      "description": "Belirli bir seviyede verilecek rolü ayarlar.",
+      "success": "{{role}} rolü artık {{level}}. seviyede verilecek.",
+      "hierarchyError": "Bu rolü veremem çünkü benim rolümden daha yüksek. Lütfen bot rolümü ödül rolünün üzerine taşıyın."
+    },
+    "setlevel": {
+      "description": "Bir kullanıcının seviyesini manuel olarak ayarlar.",
+      "0error": "Seviye negatif veya 0 olamaz.",
+      "500error": "Seviye 500'ü geçemez.",
+      "success": "{{user}} kullanıcısının seviyesi {{oldLevel}} seviyesinden {{newLevel}} seviyesine başarıyla ayarlandı.",
+      "isBot": "Botların seviyesini ayarlayamazsınız."
+    },
+    "resetxp": {
+      "description": "Bu sunucudaki TÜM XP ve seviye verilerini sıfırlar.",
+      "confirmMessage": "DİKKAT! Bu sunucudaki TÜM kullanıcıların XP ve seviye verilerini kalıcı olarak sıfırlamak üzeresiniz. Bu işlem geri alınamaz. Emin misiniz?",
+      "confirmButton": "EVET, TÜMÜNÜ SIFIRLA",
+      "cancelled": "Sıfırlama işlemi iptal edildi.",
+      "loading": "Sıfırlanıyor...",
+      "success": "Bu sunucudaki tüm XP ve seviye verileri sıfırlandı.",
+      "error": "XP sıfırlanırken bir hata oluştu."
+    },
+    "help": {
+    "description": "Botun komut listesini ve kullanım bilgilerini gösterir.",
+    "menuPlaceholder": "Bir kategori seçin...",
+    "title": "Yardım Merkezi",
+    "embedDesc": "Aşağıdaki menüden incelemek istediğiniz kategoriyi seçin.\n\nBotun dili: **Türkçe**",
+    "categories": {
+      "admin": "🛡️ Yönetici Komutları",
+      "public": "🌍 Genel Komutlar",
+      "info": "ℹ️ Bilgi Komutları",
+      "general": "⭐ Diğer"
+      },
+    "noCommands": "Bu kategoride komut bulunamadı.",
+    "footer": "Detaylı bilgi için: /help [komut]"
+    },
+    "setlevelmessage": {
+      "description": "Sunucu için özel bir seviye atlama mesajı ayarlar.",
+      "title": "Seviye Mesajı Yapılandırması",
+      "current": "Mevcut Mesaj:",
+      "default": "Varsayılan Mesaj:",
+      "variablesTitle": "Kullanılabilir Değişkenler",
+      "variablesDesc": "• **{user}**: Kullanıcıyı etiketler\n• **{level}**: Seviyeyi gösterir\n• **{guild}**: Sunucu adını gösterir",
+      "prompt": "Lütfen yeni özel seviye mesajınızı bu kanala yazın.",
+      "success": "✅ Özel seviye mesajı ayarlandı!",
+      "reset": "✅ Seviye mesajı varsayılana sıfırlandı.",
+      "cancelled": "İşlem iptal edildi.",
+      "preview": "Önizleme:",
+      "setButton": "Mesajı Ayarla",
+      "resetButton": "Sıfırla",
+      "cancelButton": "Vazgeç"
+    }
+  }
+}
