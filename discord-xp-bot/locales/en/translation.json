@@ -1,0 +1,263 @@
+{
+  "common": {
+    "noPermission": "You do not have permission to use this command.",
+    "commandError": "An error occurred.",
+    "timeout": "Timeout.",
+    "yes": "Yes",
+    "no": "No",
+    "cooldown": "Wait {{seconds}}s.",
+    "setupRequired": "Please run /setup to enable all features.",
+    "channel": "Channel",
+    "role": "Role",
+    "none": "None",
+    "notSet": "Not Set",
+    "active": "Active",
+    "inactive": "Inactive",
+    "activate": "ACTIVATE",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "secondsShort": "s"
+  },
+  "events": {
+    "guildCreate": {
+      "setupDM": "Thanks for adding me to **{{guildName}}**! Please run `/setup` in your server.",
+      "setupPublic": "Hello {{ownerTag}}! Run `/setup` to start."
+    },
+    "levelUp": {
+      "message": "Congratulations {user}, new level {level}! 🥳"
+    }
+  },
+  "setup": {
+    "panelTitle": "XP System Settings",
+    "panelDesc": "Select a Log Channel below.",
+    "selectLogPlaceholder": "Select Log Channel",
+    "systemReady": "Ready.",
+    "waitingAction": "Waiting for selection...",
+    "systemActiveTitle": "System Activated! 🎉",
+    "complete": "Setup Successful!",
+    "finalNote": "Notifications will be sent to {{channel}}.",
+    "existingSetupTitle": "Existing Setup Detected",
+    "existingSetupDesc": "Continuing will RESET current settings.",
+    "currentLog": "Current Channel",
+    "currentCooldown": "Current Cooldown",
+    "warningFooter": "Fresh setup recommended.",
+    "btnResetAndStart": "Reset & Start",
+    "cancelled": "Cancelled.",
+    "testMessageHeader": "Level Up (Test)",
+    "testMessageFooter": "Test message.",
+    "testSent": "Sent to:",
+    "testFailed": "Failed to send."
+  },
+  "top": {
+    "title": "🏆 Leaderboard",
+    "footer": "Rank: #{{rank}} • {{name}}",
+    "noData": "No data.",
+    "empty": "No data.",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "alltime": "All Time",
+    "format": "▫️ Level **{{level}}** ({{xp}} XP)",
+    "yourStatsTitle": "Your Stats",
+    "textInfo": "💭|Text",
+    "voiceInfo": "🎙️|Voice",
+    "levelShort": "Level",
+    "heavyQueryCooldown": "Cooldown active. Wait {{seconds}}s."
+  },
+  "rank": {
+    "noData": "No XP yet.",
+    "userNotFound": "User not found.",
+    "cardError": "Card error.",
+    "isBot": "Bots have no rank."
+  },
+  "settings": {
+    "title": "⚙️ {{guildName}} - Settings",
+    "logChannel": "Log Channel",
+    "cooldown": "Cooldown",
+    "seconds": "{{sec}}s",
+    "spamProtection": "Spam Protection",
+    "spamDesc": "{{window}}s / {{count}} msgs",
+    "ignoredChannels": "Ignored Channels",
+    "ignoredRoles": "Ignored Roles",
+    "footer": "Use /setup or /xp-ignore to change."
+  },
+  "xp_ignore": {
+    "missingSelection": "❌ Select a **Channel** or **Role**.",
+    "added": "✅ **{{target}}** ({{type}}) ignored.",
+    "removed": "✅ **{{target}}** ({{type}}) un-ignored."
+  },
+  "commands": {
+    "setup": {
+      "name": "setup",
+      "description": "Starts initial setup.",
+      "usage": "/setup"
+    },
+    "top": {
+      "name": "top",
+      "description": "Shows leaderboard.",
+      "usage": "/top [period]",
+      "params": {
+        "period": "Daily, Weekly, Monthly."
+      }
+    },
+    "rank": {
+      "name": "rank",
+      "description": "Shows rank card.",
+      "usage": "/rank [user]",
+      "params": {
+        "user": "Target user."
+      }
+    },
+    "settings": {
+      "name": "settings",
+      "description": "Shows settings.",
+      "usage": "/settings"
+    },
+    "xp-ignore": {
+      "name": "xp-ignore",
+      "description": "Enables/Disables XP.",
+      "usage": "/xp-ignore <channel/role>",
+      "params": {
+        "channel": "Channel to ignore.",
+        "role": "Role to ignore."
+      }
+    },
+    "setlog": {
+      "name": "setlog",
+      "description": "Sets log channel.",
+      "success": "Log channel set to {{channel}}.",
+      "usage": "/setlog <channel>",
+      "params": {
+        "channel": "Channel."
+      }
+    },
+    "setcooldown": {
+      "name": "setcooldown",
+      "description": "Sets XP cooldown.",
+      "success": "Cooldown set to {{seconds}}s.",
+      "usage": "/setcooldown <seconds>",
+      "params": {
+        "seconds": "Seconds."
+      }
+    },
+    "setlevelrole": {
+      "name": "setlevelrole",
+      "description": "Sets reward role.",
+      "success": "{{role}} at Level {{level}}.",
+      "hierarchyError": "Role hierarchy error.",
+      "usage": "/setlevelrole <level> <role>",
+      "params": {
+        "level": "Level.",
+        "role": "Role."
+      }
+    },
+    "setlevel": {
+      "name": "setlevel",
+      "description": "Sets user level.",
+      "0error": "Must be > 0.",
+      "500error": "Max 500.",
+      "success": "Set {{user}} to level {{newLevel}}.",
+      "isBot": "Cannot set bot level.",
+      "usage": "/setlevel <user> <level>",
+      "params": {
+        "user": "User.",
+        "level": "New level."
+      }
+    },
+    "resetxp": {
+      "name": "resetxp",
+      "description": "Resets ALL data.",
+      "confirmMessage": "WARNING! Resetting ALL data. Sure?",
+      "confirmButton": "YES, RESET",
+      "cancelled": "Cancelled.",
+      "loading": "Resetting...",
+      "success": "Reset complete.",
+      "error": "Error.",
+      "usage": "/resetxp"
+    },
+    "setlevelmessage": {
+      "name": "setlevelmessage",
+      "description": "Sets custom message.",
+      "title": "Message Config",
+      "current": "Current:",
+      "default": "Default:",
+      "variablesTitle": "Variables",
+      "variablesDesc": "{user}, {level}, {guild}",
+      "prompt": "Type new message.",
+      "success": "✅ Set!",
+      "reset": "✅ Reset.",
+      "cancelled": "Cancelled.",
+      "preview": "Preview:",
+      "setButton": "Set",
+      "resetButton": "Reset",
+      "cancelButton": "Cancel",
+      "usage": "/setlevelmessage"
+    },
+    "help": {
+      "name": "help",
+      "description": "Shows help menu.",
+      "usage": "/help [command]",
+      "params": {
+        "command": "Command name."
+      },
+      "ui": {
+        "title": "📚 Help Center",
+        "description": "Select a category or use `/help [command]`.",
+        "footer": "Firuze | User: {{user}}",
+        "menuPlaceholder": "Select category...",
+        "menuDesc": "{{count}} Commands",
+        "noCommands": "No commands.",
+        "headers": {
+          "usage": "⌨️ Usage",
+          "params": "⚙️ Parameters",
+          "perms": "🔒 Requirements",
+          "aliases": "Aliases"
+        },
+        "labels": {
+          "mandatory": "Mandatory",
+          "optional": "Optional",
+          "adminOnly": "Admin",
+          "noPerms": "Public",
+          "cooldown": "{{seconds}}s"
+        },
+        "categories": {
+          "admin": "🛡️ Admin",
+          "public": "🌍 Public",
+          "info": "ℹ️ Info",
+          "general": "⭐ General"
+        },
+        "errors": {
+          "commandNotFound": "❌ Command **{{cmd}}** not found."
+        }
+      }
+    },
+    "checkbot": {
+      "loading": "System data and permissions are being analyzed...",
+      "embedTitle": "Bot System Analysis",
+      "embedDesc": "Below are the bot health and permission scan results for the **{{guildName}}** server.",
+      "footer": "Permission system analysis completed.",
+      "headers": {
+        "adminStatus": "Administrator Permission",
+        "hierarchy": "Role Hierarchy",
+        "permDetail": "Detailed Permission Check",
+        "result": "RESULT AND RECOMMENDATION"
+      },
+      "labels": {
+        "highestRole": "Highest Role"
+      },
+    "permissions": {
+      "sendMessages": "Send Messages",
+      "embedLinks": "Embed Links",
+      "attachFiles": "Attach Files (Image/Canvas)",
+      "manageRoles": "Manage Roles (Grant Rewards)",
+      "externalEmojis": "Use External Emojis",
+      "viewChannel": "View Channels"
+    },
+    "status": {
+      "perfect": "PERFECT: The bot has administrator permission. All functions will work at 100%.",
+      "good": "GOOD: No administrator permission, but all critical permissions are enabled. The system will function.",
+      "critical": "CRITICAL ERROR: Some core bot functions (Messages/Images, etc.) are disabled. Please check the permissions!"
+      }
+    }
+  }
+}
